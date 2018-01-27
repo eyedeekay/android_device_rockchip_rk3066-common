@@ -49,7 +49,7 @@ TARGET_RECOVERY_INITRC := device/rockchip/rk3066-common/recovery/init.recovery.r
 BOARD_CUSTOM_BOOTIMG_MK := device/rockchip/rk3066-common/customboot.mk
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/rockchip
+TARGET_KERNEL_SOURCE := kernel/rockchip/rk3066
 
 # Custom kernel toolchain
 # TARGET_KERNEL_CUSTOM_TOOLCHAIN :=
