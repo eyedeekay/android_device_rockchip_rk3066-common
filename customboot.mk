@@ -40,6 +40,10 @@ $(RK_UPDATE_PATH)/kernel.img: $(PRODUCT_OUT)/kernel
 
 .PHONY: rk_systemimage rk_updateimage rk_flashimage rk_kernelimage rk_clean
 
+rk_bootimage: $(RK_UPDATE_PATH)/boot.img
+
+rk_recoveryimage: $(RK_UPDATE_PATH)/recovery.img
+
 rk_systemimage: $(RK_UPDATE_PATH)/system.img
 
 rk_updateimage: $(RK_UPDATE_PATH)/update.img
