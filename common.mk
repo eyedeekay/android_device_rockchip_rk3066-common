@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-COMMON_PATH := device/rk3066-common
+COMMON_PATH := device/rockchip/rk3066-common
 
 DEVICE_PACKAGE_OVERLAYS := $(COMMON_PATH)/overlay
 
@@ -154,10 +154,6 @@ PRODUCT_PACKAGES += \
 # Graphics
 PRODUCT_PACKAGES += \
     librs_jni
-
-# Extra packages
-PRODUCT_PACKAGES += \
-    Camera
 
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
