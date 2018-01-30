@@ -3,12 +3,12 @@ INSTALLED_BOOTIMAGE_TARGET := $(RK_UPDATE_PATH)/boot.img
 INSTALLED_RECOVERYIMAGE_TARGET := $(RK_UPDATE_PATH)/recovery.img
 MKKRNLIMG := $(HOST_OUT_EXECUTABLES)/rk_mkkrnlimg
 
-$(INSTALLED_BOOTIMAGE_TARGET) : $(MKKRNLIMG) $(INSTALLED_RAMDISK_TARGET)
+$(INSTALLED_BOOTIMAGE_TARGET): $(MKKRNLIMG) $(INSTALLED_RAMDISK_TARGET)
 	$(call pretty,"Target boot image: $@")
 	mkdir -p $(RK_UPDATE_PATH)
 	$(hide) $(MKKRNLIMG) -a $(INSTALLED_RAMDISK_TARGET) $@
 
-$(INSTALLED_RECOVERYIMAGE_TARGET) : $(MKKRNLIMG) $(recovery_ramdisk)
+$(INSTALLED_RECOVERYIMAGE_TARGET): $(MKKRNLIMG) $(recovery_ramdisk)
 	@echo -e ${CL_CYN}"----- Making recovery image ------"${CL_RST}
 	mkdir -p $(RK_UPDATE_PATH)
 	$(hide) $(MKKRNLIMG) -a $(recovery_ramdisk) $@
@@ -40,3 +40,6 @@ rk_kernelimage: $(RK_UPDATE_PATH)/kernel.img
 
 rk_clean:
 	rm $(RK_UPDATE_PATH) -rf
+
+rk_path:
+	@echo $(RK_UPDATE_PATH)
