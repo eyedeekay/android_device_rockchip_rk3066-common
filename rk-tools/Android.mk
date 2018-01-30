@@ -2,7 +2,7 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := optional
-LOCAL_CFLAGS := -g -O3 -DUSE_OPENSSL -Wall
+LOCAL_CFLAGS := -g -O3 -DOPENSSL_IS_BORINGSSL -DUSE_OPENSSL -Wall
 LOCAL_C_INCLUDES += external/boringssl/include
 LOCAL_LDLIBS := -lssl -lcrypto
 LOCAL_SHARED_LIBRARIES += libssl libcrypto
@@ -12,7 +12,7 @@ include $(BUILD_HOST_EXECUTABLE)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := optional
-LOCAL_CFLAGS := -g -O3 -DUSE_OPENSSL -Wall
+LOCAL_CFLAGS := -g -O3 -DOPENSSL_IS_BORINGSSL -DUSE_OPENSSL -Wall
 LOCAL_C_INCLUDES += external/boringssl/include
 LOCAL_LDLIBS := -lssl -lcrypto
 LOCAL_SHARED_LIBRARIES += libssl libcrypto
@@ -22,7 +22,7 @@ include $(BUILD_HOST_EXECUTABLE)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := optional
-LOCAL_CFLAGS := -g -O3 -DUSE_OPENSSL -Wall
+LOCAL_CFLAGS := -g -O3 -DOPENSSL_IS_BORINGSSL -DUSE_OPENSSL -Wall
 LOCAL_C_INCLUDES += external/boringssl/include
 LOCAL_LDLIBS := -lssl -lcrypto
 LOCAL_SHARED_LIBRARIES += libssl libcrypto
@@ -32,7 +32,7 @@ include $(BUILD_HOST_EXECUTABLE)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := optional
-LOCAL_CFLAGS := -g -O3 -DUSE_OPENSSL -Wall
+LOCAL_CFLAGS := -g -O3 -DOPENSSL_IS_BORINGSSL -DUSE_OPENSSL -Wall
 LOCAL_C_INCLUDES += external/boringssl/include
 LOCAL_LDLIBS := -lssl -lcrypto
 LOCAL_SHARED_LIBRARIES += libssl libcrypto
