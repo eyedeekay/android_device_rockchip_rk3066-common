@@ -5,7 +5,7 @@ BE_PATH := $(LOCAL_PATH)../../../
 include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := optional
 LOCAL_CFLAGS := -g -O3 -DUSE_OPENSSL -Wall
-LOCAL_C_INCLUDES += $(BE_PATH)external/openssl/include
+LOCAL_C_INCLUDES += $(BE_PATH)external/boringssl/include
 LOCAL_LDLIBS := -lssl -lcrypto
 LOCAL_SHARED_LIBRARIES += libssl libcrypto
 LOCAL_SRC_FILES := afptool.c
@@ -15,7 +15,7 @@ include $(BUILD_HOST_EXECUTABLE)
 include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := optional
 LOCAL_CFLAGS := -g -O3 -DUSE_OPENSSL -Wall
-LOCAL_C_INCLUDES += $(BE_PATH)external/openssl/include
+LOCAL_C_INCLUDES += $(BE_PATH)external/boringssl/include
 LOCAL_LDLIBS := -lssl -lcrypto
 LOCAL_SHARED_LIBRARIES += libssl libcrypto
 LOCAL_SRC_FILES := img_unpack.c
@@ -25,7 +25,7 @@ include $(BUILD_HOST_EXECUTABLE)
 include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := optional
 LOCAL_CFLAGS := -g -O3 -DUSE_OPENSSL -Wall
-LOCAL_C_INCLUDES += $(BE_PATH)external/openssl/include
+LOCAL_C_INCLUDES += $(BE_PATH)external/boringssl/include
 LOCAL_LDLIBS := -lssl -lcrypto
 LOCAL_SHARED_LIBRARIES += libssl libcrypto
 LOCAL_SRC_FILES := img_maker.c
@@ -35,7 +35,7 @@ include $(BUILD_HOST_EXECUTABLE)
 include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := optional
 LOCAL_CFLAGS := -g -O3 -DUSE_OPENSSL -Wall
-LOCAL_C_INCLUDES += $(BE_PATH)external/openssl/include
+LOCAL_C_INCLUDES += $(BE_PATH)external/boringssl/include
 LOCAL_LDLIBS := -lssl -lcrypto
 LOCAL_SHARED_LIBRARIES += libssl libcrypto
 LOCAL_SRC_FILES := mkkrnlimg.c
