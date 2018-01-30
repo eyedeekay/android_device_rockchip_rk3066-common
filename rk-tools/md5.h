@@ -3,7 +3,7 @@
 
 #ifdef USE_OPENSSL
 
-#include <openssl/md5.h>
+#include <boringssl/md5.h>
 
 #elif defined USE_GCRYPT
 
