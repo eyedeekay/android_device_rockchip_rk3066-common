@@ -140,12 +140,12 @@ PRODUCT_PACKAGES += \
     setup_fs
 
 # Rockchip utils
-#PRODUCT_PACKAGES += \
-#    rk_afptool \
-#    rk_img_unpack \
-#    rk_img_maker \
-#    rk_mkkrnlimg \
-#    rk_mkbootimg
+PRODUCT_PACKAGES += \
+    rk_afptool \
+    rk_img_unpack \
+    rk_img_maker \
+    rk_mkkrnlimg \
+    rk_mkbootimg
 
 # USB
 PRODUCT_PACKAGES += \
