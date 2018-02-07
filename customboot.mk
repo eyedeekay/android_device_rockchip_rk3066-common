@@ -8,7 +8,7 @@ $(RK_UPDATE_PATH)/boot.img: $(MKKRNLIMG) $(INSTALLED_RAMDISK_TARGET)
 	mkdir -p $(RK_UPDATE_PATH)
 	$(hide) $(MKKRNLIMG) -a $(INSTALLED_RAMDISK_TARGET) $@
 
-$(RK_UPDATE_PATH)/recovery.img: $(MKKRNLIMG) $(INSTALLED_RAMDISK_TARGET)
+$(PRODUCT_OUT)/recovery.img: $(MKKRNLIMG) $(INSTALLED_RAMDISK_TARGET)
 	$(call pretty,"Target boot image: $@")
 	mkdir -p $(RK_UPDATE_PATH)
 	$(hide) $(MKKRNLIMG) -a $(INSTALLED_RAMDISK_TARGET) $@
