@@ -30,8 +30,8 @@ ARCH_ARM_HAVE_ARMV7A := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
 # CFLAGS
-TARGET_GLOBAL_CFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
+#STARGET_GLOBAL_CFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
+#TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
 #COMMON_GLOBAL_CFLAGS += -DUSES_AUDIO_LEGACY
 
 TARGET_BOARD_PLATFORM := rockchip
