@@ -173,7 +173,7 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     sys.hwc.compose_policy=6 \
     testing.mediascanner.skiplist=/mnt/sdcard/Android/
 
-PRODUCT_CHARACTERISTICS := tablet
+PRODUCT_CHARACTERISTICS := tv
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 # Inherit tablet dalvik settings
