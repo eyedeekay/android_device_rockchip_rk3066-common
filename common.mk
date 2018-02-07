@@ -166,12 +166,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     hwui.render_dirty_regions=false \
     wifi.supplicant_scan_interval=15
 
-ADDITIONAL_DEFAULT_PROPERTIES += \
-    persist.sys.timezone=Europe/Stockholm \
-    ro.allow.mock.location=1 \
-    ro.kernel.android.checkjni=1 \
-    sys.hwc.compose_policy=6 \
-    testing.mediascanner.skiplist=/mnt/sdcard/Android/
+#ADDITIONAL_DEFAULT_PROPERTIES += \
+#    persist.sys.timezone=Europe/Stockholm \
+#    ro.allow.mock.location=1 \
+#    ro.kernel.android.checkjni=1 \
+#    sys.hwc.compose_policy=6 \
+#    testing.mediascanner.skiplist=/mnt/sdcard/Android/
 
 PRODUCT_CHARACTERISTICS := tv
 PRODUCT_TAGS += dalvik.gc.type-precise
