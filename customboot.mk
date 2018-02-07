@@ -3,15 +3,15 @@ INSTALLED_BOOTIMAGE_TARGET := $(RK_UPDATE_PATH)/boot.img
 INSTALLED_RECOVERYIMAGE_TARGET := $(RK_UPDATE_PATH)/recovery.img
 MKKRNLIMG := $(HOST_OUT_EXECUTABLES)/rk_mkkrnlimg
 
-#$(RK_UPDATE_PATH)/boot.img: $(MKKRNLIMG) $(INSTALLED_RAMDISK_TARGET)
-#	$(call pretty,"Target boot image: $@")
-#	mkdir -p $(RK_UPDATE_PATH)
-#	$(hide) $(MKKRNLIMG) -a $(INSTALLED_RAMDISK_TARGET) $@
+$(RK_UPDATE_PATH)/boot.img: $(MKKRNLIMG) $(INSTALLED_RAMDISK_TARGET)
+	$(call pretty,"Target boot image: $@")
+	mkdir -p $(RK_UPDATE_PATH)
+	$(hide) $(MKKRNLIMG) -a $(INSTALLED_RAMDISK_TARGET) $@
 
-#$(RK_UPDATE_PATH)/recovery.img: $(MKKRNLIMG) $(INSTALLED_RAMDISK_TARGET)
-#	$(call pretty,"Target boot image: $@")
-#	mkdir -p $(RK_UPDATE_PATH)
-#	$(hide) $(MKKRNLIMG) -a $(INSTALLED_RAMDISK_TARGET) $@
+$(RK_UPDATE_PATH)/recovery.img: $(MKKRNLIMG) $(INSTALLED_RAMDISK_TARGET)
+	$(call pretty,"Target boot image: $@")
+	mkdir -p $(RK_UPDATE_PATH)
+	$(hide) $(MKKRNLIMG) -a $(INSTALLED_RAMDISK_TARGET) $@
 
 $(INSTALLED_BOOTIMAGE_TARGET): $(MKKRNLIMG) $(INSTALLED_RAMDISK_TARGET)
 	$(call pretty,"Target boot image: $@")
